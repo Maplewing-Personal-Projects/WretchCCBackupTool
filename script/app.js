@@ -71,9 +71,9 @@ $(document).ready(function(){
 		$('#result').hide("slow",function(){
 			$.get( "http://www.wretch.cc/blog/" + username + "%26list%3D1", function(data){
 				data = data.responseText;
-					$('#result').html("<h2>RAW Data：（每五秒抓一篇）</h2><p>完成會跳出存檔視窗</p><textarea />");
+					$('#result').html("<h2>RAW Data：（每一秒抓一篇）</h2><p>完成會跳出存檔視窗</p><div id='progress'></div>");
 					$('.loading').hide("slow", function(){ $('#result').show("slow") });
-					var $display = $('#result textarea');
+					var $display = $('#progress');
 					var RSSContent = '<?xml version="1.0" encoding="UTF-8"?><wretch>';
 					var $content = $(data).find(".blogbody table tr");
 					$content.each(function(index){
@@ -88,9 +88,9 @@ $(document).ready(function(){
 									RSSContent += "</wretch>";
 									saveTextAsFile(RSSContent, (new Date())+"_"+username+".xml");
 								}
-								$display.html(escapeHTML(RSSContent));
+								$display.html("進度：" + (index / $content.length * 100) + "%" );
 						});
-					}, index * 5000);});
+					}, index * 1000);});
 					
 			});	
 		});
