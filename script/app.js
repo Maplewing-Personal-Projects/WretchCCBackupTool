@@ -90,7 +90,7 @@ $(document).ready(function(){
 									RSSContent += "</wretch>";
 									saveTextAsFile(RSSContent, (new Date())+"_"+username+".xml");
 								}
-								$display.html("進度：" + (index / $content.length * 100) + "%" );
+								$display.html("進度：" + (index+1 / $content.length * 100) + "%" );
 						});
 					}, index * second);});
 					
