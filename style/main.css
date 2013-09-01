@@ -1,0 +1,82 @@
+html{
+  margin: 0px;
+  font-family: 'Segoe UI Light', '微軟正黑體';
+}
+
+.app{
+  background: #135;
+  color: white;
+  
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+.app h1{
+  font-size: 36pt;
+  font-family: 'Segoe UI Light';
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+
+.app h2{
+  font-size: 24pt;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 30px;
+}
+
+.app input[type=text]{
+	background: #dddddd;
+	border: 0px;
+	width: 300px;
+	height: 30px;
+	padding: 2px;
+	font-size: 12pt;
+	font-family: 'Segoe UI Light', '微軟正黑體';
+}
+
+.app input[type=text]:focus{
+	border: 0px;
+	background: white;
+}
+
+.app button{
+  font-family: '微軟正黑體';
+  background: black;
+  border: 1px solid white;
+  font-size: 12pt;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.app button:hover{
+  background: #8800ff;
+}
+
+.app button:active{
+  background: white;
+  color: black;
+}
+
+.app .result ul{
+	list-style-type: none;
+}
+
+.app .result ul li{
+	border: 1px solid white;
+	width: 500px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.app .result ul li a{
+	padding: 5px;
+	color: white;
+	text-decoration: none;
+}
+
+.app .result ul li a:hover{
+	color: #8800ff;
+}
