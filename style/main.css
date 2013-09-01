@@ -91,3 +91,8 @@ html{
 	margin: 5px;
 	margin-left: 0px;
 }
+
+.app .loading{
+	display: none;
+	margin: 40px;
+}
