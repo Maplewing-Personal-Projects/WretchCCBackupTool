@@ -35,6 +35,7 @@ html{
 	font-size: 12pt;
 	font-family: 'Segoe UI Light', '微軟正黑體';
 	margin: 5px;
+
 }
 
 .app input[type=text]:focus{
@@ -49,7 +50,7 @@ html{
   font-size: 12pt;
   color: white;
   padding: 5px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .app button:hover{
