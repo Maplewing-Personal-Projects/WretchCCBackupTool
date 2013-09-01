@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style/main.css" />
     <title>Wretch.cc Backup Tool</title>
     <script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="script/jquery.xdomainajax.js"></script>
     <script type="text/javascript" src="script/app.js"></script>
   </head>
   <body class="app">
@@ -14,6 +15,7 @@
 		</h1>
 		<form action="#" method="post" id="inputForm">
 			<input type="text" name="username" id="username" placeholder="無名部落格帳號"/><button id="getAllArticle">取得所有文章</button>	
+			<button id="getAtomFormat">產生Raw Data格式備份</button>	
 		</form>
 		<div id="result" class="result">
 		</div>

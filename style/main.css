@@ -80,3 +80,14 @@ html{
 .app .result ul li a:hover{
 	color: #8800ff;
 }
+
+.app textarea{
+	width: 600px;
+	height: 300px;
+	margin-top: 10px;
+}
+
+.app p{
+	margin: 5px;
+	margin-left: 0px;
+}
