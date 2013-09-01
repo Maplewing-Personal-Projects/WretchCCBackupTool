@@ -34,6 +34,7 @@ html{
 	padding: 2px;
 	font-size: 12pt;
 	font-family: 'Segoe UI Light', '微軟正黑體';
+	margin: 5px;
 }
 
 .app input[type=text]:focus{

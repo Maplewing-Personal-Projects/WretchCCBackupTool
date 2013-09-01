@@ -67,11 +67,13 @@ $(document).ready(function(){
 	
 	$('#getAtomFormat').click(function(){
 		var username = $('#username').val();
+		var second = parseInt($('#interval').val()) * 1000;
+		if( !second ) second = 5000;
 		$('.loading').show("slow");
 		$('#result').hide("slow",function(){
 			$.get( "http://www.wretch.cc/blog/" + username + "%26list%3D1", function(data){
 				data = data.responseText;
-					$('#result').html("<h2>RAW Data：（每一秒抓一篇）</h2><p>完成會跳出存檔視窗</p><div id='progress'></div>");
+					$('#result').html("<h2>RAW Data：</h2><p>完成會跳出存檔視窗</p><div id='progress'></div>");
 					$('.loading').hide("slow", function(){ $('#result').show("slow") });
 					var $display = $('#progress');
 					var RSSContent = '<?xml version="1.0" encoding="UTF-8"?><wretch>';
@@ -90,7 +92,7 @@ $(document).ready(function(){
 								}
 								$display.html("進度：" + (index / $content.length * 100) + "%" );
 						});
-					}, index * 1000);});
+					}, index * second);});
 					
 			});	
 		});
